@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This Project Features Names Of GOD, which are:
+This Project Features the Following Names Of GOD:
 * Elohim
 * Yahweh
 * El Elyon
@@ -18,7 +18,7 @@ This Project Features Names Of GOD, which are:
 * Yahweh Shammah
 * Attiq Yomin
 
-visit the site to see the meanings and a short description of the significance.
+visit the site to see the meanings and a short description of a little of the significance, including bible references.
 
 
 
