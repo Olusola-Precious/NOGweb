@@ -1,0 +1,22 @@
+.passage {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.passage:hover {
+    text-decoration: overline;
+}
+
+.card {
+    width: 150px;
+    font-size: 10px;
+    color: black;
+    position: absolute;
+    z-index: 100;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}

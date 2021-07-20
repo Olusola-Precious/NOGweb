@@ -1,0 +1,44 @@
+.box {
+    height: 100%;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 30px #01297014;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 2px solid #2bd6fa;
+    transition: all 0.5s ease;
+    background: #fff;
+}
+
+.box h3 {
+    color: #444;
+    font-weight: 700;
+}
+
+.box p {
+    text-align: center;
+}
+
+.box h5 {
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(121, 115, 115);
+}
+
+.box:hover {
+    /* border: 3px solid #0683c2; */
+    box-shadow: 0px 0px 30px #0683c2;
+}
+
+
+/* .box:hover {
+    background: #0683c2;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+/*
+.box:hover h3,
+.box:hover p :not(.card-text),
+.box:hover h5 {
+    color: #fff;
+} */

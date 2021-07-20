@@ -1,0 +1,12 @@
+main {
+    padding: 10px;
+}
+
+main .row {
+    position: relative;
+    top: -70px;
+}
+
+main .col {
+    margin-bottom: 60px;
+}
