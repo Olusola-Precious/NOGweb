@@ -84,7 +84,7 @@ const namesOfGOD = [{
     },
     {
         name: "Yahweh Shammah",
-        meaning: "This Lord Is There",
+        meaning: "The Lord Is There",
         significance: "God is always present with us",
         references: ["Ezekiel 48:35"]
     },

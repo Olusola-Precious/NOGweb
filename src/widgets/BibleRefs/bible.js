@@ -12,10 +12,10 @@ class Bible extends Component {
     }
 
 
-    request = (params)=>{
+    request = (url,params)=>{
         var options = {
             method: 'GET',
-            url: 'https://ajith-holy-bible.p.rapidapi.com/GetVerseOfaChapter',
+            url,
             params,
             headers: {
                 'x-rapidapi-key': 'e24119d8c0msh62e1b8f137bf56fp181da0jsne7b0d1f9d17f',
@@ -56,10 +56,19 @@ class Bible extends Component {
             //console.log(point)
             let [book, passage] = point.split(' ');
             //console.log("Book Of "+ book + "then " + passage);
-            let [chapter, verse] = passage.split(':');
+            let [chapter, verse] = passage.trim().split(':');
+            let url,params;
             //console.log(`Book of ${book} Chapter ${chapter} Verse ${verse}`)
-            let params = { Book: book, chapter: chapter, Verse: verse }
-            this.request(params);
+            if(verse.includes('-')){
+                let [verseFrom, verseTo] = verse.split('-');
+                url = 'https://ajith-holy-bible.p.rapidapi.com/GetVerses';
+                params = { VerseTo: verseTo, VerseFrom: verseFrom, chapter: chapter, Book: book };
+            }else{
+            url = 'https://ajith-holy-bible.p.rapidapi.com/GetVerseOfaChapter';
+            params = { Book: book, chapter: chapter, Verse: verse }
+            }
+
+            this.request(url,params);
             //console.log(this.state);
             this.setState({ isShow: true })
 

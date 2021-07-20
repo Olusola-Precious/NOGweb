@@ -12,11 +12,17 @@
 
 .card {
     width: 150px;
-    font-size: 10px;
+    font-size: 15px;
     color: black;
     position: absolute;
     z-index: 100;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    border: 1px solid #0683c2;
+}
+
+.card .card-header {
+    background: #0683c2;
+    color: #fff;
 }
