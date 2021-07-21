@@ -2,7 +2,7 @@ const namesOfGOD = [{
         name: "Elohim",
         meaning: "God",
         significance: "Refers to God's Power and might. He is the only supreme and true God",
-        references: ["Genesis 1:1", "Numbers 23:19", "Psalm 19:1"]
+        references: ["Genesis 1:1", "Numbers 23:19", "Psalms 19:1"]
     },
     {
         name: "Yahweh",
@@ -14,7 +14,7 @@ const namesOfGOD = [{
         name: "El Elyon",
         meaning: "God Most High",
         significance: "He is above all other gods;nothing in life is more sacred",
-        references: ["Genesis 14:17-20", "Numbers 24:16", "Psalm 7:17", "Isaiah 14:13", "Isaiah 14:14"]
+        references: ["Genesis 14:17-20", "Numbers 24:16", "Psalms 7:17", "Isaiah 14:13", "Isaiah 14:14"]
     },
     {
         name: "El Roi",
@@ -26,7 +26,7 @@ const namesOfGOD = [{
         name: "El Shaddai",
         meaning: "God Almighty",
         significance: "Gos is all-powerful",
-        references: ["Genesis 17:1", "Psalm 91:1"]
+        references: ["Genesis 17:1", "Psalms 91:1"]
     },
     {
         name: "Yahweh Yireh",
@@ -50,7 +50,7 @@ const namesOfGOD = [{
         name: "Yahweh Elohe Yisreal",
         meaning: "Lord God of Isreal",
         significance: "He is the God of the nation",
-        references: ["Judges 5:3", "Psalm 59:5", "Isaiah 17:6", "Zaphaniah 2:9"]
+        references: ["Judges 5:3", "Psalms 59:5", "Isaiah 17:6", "Zaphaniah 2:9"]
     },
     {
         name: "Yahweh Shalom",
