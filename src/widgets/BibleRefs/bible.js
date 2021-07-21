@@ -11,6 +11,26 @@ class Bible extends Component {
         isShow:false
     }
 
+    parseBiblePassage = ()=>{
+        let point = this.props.point
+        //console.log(point)
+        var book,passage;
+        let splits = point.split(' ');
+        if(splits.length > 2){
+            book = splits[0] +' '+ splits[1];
+            passage = splits[2];
+        }
+        else{
+            book = splits[0];
+            passage = splits[1];
+        }
+
+        return [book,passage]
+        //console.log("Book Of "+ book + "then " + passage);
+        
+        
+    }
+
 
     request = (url,params)=>{
         var options = {
@@ -52,12 +72,9 @@ class Bible extends Component {
     GetPassage(){
         
         
-            let point = this.props.point
-            //console.log(point)
-            let [book, passage] = point.split(' ');
-            //console.log("Book Of "+ book + "then " + passage);
+            let [book,passage] = this.parseBiblePassage();
             let [chapter, verse] = passage.trim().split(':');
-            let url,params;
+            var url,params;
             //console.log(`Book of ${book} Chapter ${chapter} Verse ${verse}`)
             if(verse.includes('-')){
                 let [verseFrom, verseTo] = verse.split('-');
