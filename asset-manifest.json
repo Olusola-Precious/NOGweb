@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/NOGweb/static/css/main.aeb1c075.chunk.css",
-    "main.js": "/NOGweb/static/js/main.73d058cf.chunk.js",
-    "main.js.map": "/NOGweb/static/js/main.73d058cf.chunk.js.map",
-    "runtime-main.js": "/NOGweb/static/js/runtime-main.cb82bf60.js",
-    "runtime-main.js.map": "/NOGweb/static/js/runtime-main.cb82bf60.js.map",
-    "static/js/2.22aa9a68.chunk.js": "/NOGweb/static/js/2.22aa9a68.chunk.js",
-    "static/js/2.22aa9a68.chunk.js.map": "/NOGweb/static/js/2.22aa9a68.chunk.js.map",
-    "index.html": "/NOGweb/index.html",
-    "static/css/main.aeb1c075.chunk.css.map": "/NOGweb/static/css/main.aeb1c075.chunk.css.map",
-    "static/js/2.22aa9a68.chunk.js.LICENSE.txt": "/NOGweb/static/js/2.22aa9a68.chunk.js.LICENSE.txt"
+    "main.css": "/NamesOfGod/static/css/main.92f9e84a.chunk.css",
+    "main.js": "/NamesOfGod/static/js/main.69689e1e.chunk.js",
+    "main.js.map": "/NamesOfGod/static/js/main.69689e1e.chunk.js.map",
+    "runtime-main.js": "/NamesOfGod/static/js/runtime-main.06d7e546.js",
+    "runtime-main.js.map": "/NamesOfGod/static/js/runtime-main.06d7e546.js.map",
+    "static/js/2.8a259950.chunk.js": "/NamesOfGod/static/js/2.8a259950.chunk.js",
+    "static/js/2.8a259950.chunk.js.map": "/NamesOfGod/static/js/2.8a259950.chunk.js.map",
+    "index.html": "/NamesOfGod/index.html",
+    "static/css/main.92f9e84a.chunk.css.map": "/NamesOfGod/static/css/main.92f9e84a.chunk.css.map",
+    "static/js/2.8a259950.chunk.js.LICENSE.txt": "/NamesOfGod/static/js/2.8a259950.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cb82bf60.js",
-    "static/js/2.22aa9a68.chunk.js",
-    "static/css/main.aeb1c075.chunk.css",
-    "static/js/main.73d058cf.chunk.js"
+    "static/js/runtime-main.06d7e546.js",
+    "static/js/2.8a259950.chunk.js",
+    "static/css/main.92f9e84a.chunk.css",
+    "static/js/main.69689e1e.chunk.js"
   ]
 }
