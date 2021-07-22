@@ -8,22 +8,24 @@
         "@testing-library/user-event": "^12.1.10",
         "axios": "^0.21.1",
         "bootstrap": "^5.0.2",
+        "cors": "^2.8.5",
+        "emailjs-com": "^3.2.0",
+        "express": "^4.17.1",
+        "nodemailer": "^6.6.3",
         "react": "^17.0.2",
         "react-bootstrap": "^1.6.1",
         "react-dom": "^17.0.2",
         "react-scripts": "4.0.3",
         "web-vitals": "^1.0.1"
     },
-    "homepage": "http://Olusola-Precious.github.io/NOGweb",
+    "homepage": "http://Olusola-Precious.github.io/NamesOfGod",
     "scripts": {
         "start": "react-scripts start",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
-
     },
     "eslintConfig": {
         "extends": [

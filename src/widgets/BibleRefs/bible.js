@@ -8,7 +8,8 @@ class Bible extends Component {
     state = {
         fetched: false,
         scripture:{},
-        isShow:false
+        isShow:false,
+        errorMsg:''
     }
 
     parseBiblePassage = ()=>{
@@ -53,7 +54,8 @@ class Bible extends Component {
             //console.log(passage);
             this.setState({
                 fetched,
-                scripture:passage
+                scripture:passage,
+                errorMsg: ''
             })
 
             return
@@ -63,7 +65,11 @@ class Bible extends Component {
         })
         .catch((error)=>{
             
-            console.log(error);
+            //console.log("Network error");
+            this.setState({
+                errorMsg:'You are currently offline'
+            })
+
         })
 
         return
@@ -108,7 +114,7 @@ class Bible extends Component {
         //onClick={(e)=>this.GetPassage()}
         >
             {/* {this.state.isShow ?  : null} */}
-            {this.state.isShow ? <Preview fetched={this.state.fetched} data={this.state.scripture} /> : null}
+            {this.state.isShow ? <Preview fetched={this.state.fetched} err={this.state.errorMsg} data={this.state.scripture} /> : null}
             {this.props.point}
             {this.props.break ? <br /> : null}
         </span>
