@@ -1,0 +1,33 @@
+.modal-content {
+    width: 400px;
+    text-align: center;
+}
+
+.success,
+.danger {
+    font-size: 19px;
+}
+
+.success .modal-header {
+    background: #23992d;
+    border-bottom: 1px solid #23992d;
+    color: #fff;
+}
+
+.success button {
+    background: #23992d;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.danger .modal-header {
+    background: #992333;
+    border-bottom: 1px solid #992333;
+    color: #fff;
+}
+
+.danger button {
+    background: #992333;
+    font-weight: 200;
+    font-size: 25px;
+}

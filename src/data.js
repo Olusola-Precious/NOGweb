@@ -50,7 +50,7 @@ const namesOfGOD = [{
         name: "Yahweh Elohe Yisreal",
         meaning: "Lord God of Isreal",
         significance: "He is the God of the nation",
-        references: ["Judges 5:3", "Psalms 59:5", "Isaiah 17:6", "Zaphaniah 2:9"]
+        references: ["Judges 5:3", "Psalms 59:5", "Isaiah 17:6", "Zephaniah 2:9"]
     },
     {
         name: "Yahweh Shalom",
@@ -91,7 +91,7 @@ const namesOfGOD = [{
     {
         name: "Attiq Yomin",
         meaning: "Ancient Of Days",
-        significance: "God is the ultimate authority.He will one day judge all nations",
+        significance: "God is the ultimate authority. He will one day judge all nations",
         references: ["Daniel 7:9", "Daniel 7:13"]
     }
 ]

@@ -10,3 +10,51 @@ main .row {
 main .col {
     margin-bottom: 60px;
 }
+
+.quote {
+    margin: 0;
+    background: #fff;
+    box-shadow: 2px 8px 12px #01297014;
+    color: #012970;
+    padding: 1em;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 1em;
+}
+
+.callout {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: hsla(218, 81%, 13%, 0.274);
+}
+
+.quote cite::before,
+.quote cite::after {
+    width: 20px;
+    height: 22px;
+    font-size: 22px;
+}
+
+.quote cite::before {
+    content: open-quote;
+}
+
+.quote cite::after {
+    content: close-quote;
+}
+
+.quote figcaption,
+.quote blockquote {
+    margin: 1em;
+}
+
+.quote figcaption {
+    text-align: end;
+}
+
+.quote a {
+    text-decoration: underline;
+    color: #012970;
+}

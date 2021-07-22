@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
-import { Form,Button, Row,Col, Modal } from 'react-bootstrap';
+import { Form,Button, Row,Col} from 'react-bootstrap';
 import './form.css';
+import PopUp from '../Modal/popup';
 import {send} from 'emailjs-com';
 
 class ContactForm extends Component{
@@ -14,14 +15,20 @@ class ContactForm extends Component{
         },
         
         formResponse:{
-        from_name: '',
-        to_name:'Precious',
-        message: '',
-        reply_to: '',
-    app_name:'Names Of God'}
+            from_name: '',
+            to_name:'Precious',
+            message: '',
+            reply_to: '',
+            app_name:'Names Of God'
+        },
+
+        button:{
+            text:'Send Message',
+            disabled:false
+        }
     }
 
-    clearForm = ()=>{
+    clearForm = (state)=>{
         this.setState({
             formResponse: {
                 from_name: '',
@@ -31,6 +38,9 @@ class ContactForm extends Component{
                 app_name: 'Names Of God'
             }
         })
+
+
+        
     }
 
 
@@ -43,13 +53,25 @@ class ContactForm extends Component{
 
 
         this.setState({
-            modal
+            modal,
+            button: {
+                text: 'Send Message',
+                disabled: false
+            }
         })
+        
     }
+
+    toTitle = (text)=>{
+        let ntext = text.split(' ')[0];
+        return ntext[0].toUpperCase() + ntext.slice(1,);
+    }
+
+
 
     SendData = (data) =>{
         // const config = (
-            
+        let sender = this.toTitle(data.from_name);
         // )
         send(
             'service_x436oj2', 'template_ogr5as2', data, 'user_FP75xPCHXMi2fTigqYSdB'
@@ -60,7 +82,12 @@ class ContactForm extends Component{
                 modal:{showModal: true,
                 variant:'success',
                 remark:'Successful',
-                message:'Your message was sent succefully'}
+                message:`${sender}, your message was sent succefully`},
+
+                button: {
+                    text: 'Sent',
+                    disabled: true
+                }
             })
             this.clearForm();
 
@@ -70,13 +97,25 @@ class ContactForm extends Component{
                 modal: {
                     showModal: true,
                     variant: 'danger',
-                    remark: 'Failed',
-                    message: 'Your message was not sent succefully, Try sending again'}
-            })
+                    remark: 'Oops!... failed to send',
+                    message: 'Check your internet connection and try sending again'
+                },
+                button: {
+                    text: 'Failed...',
+                    disabled: true
+                }
+                })
             console.log("Failed");
+            
         });
 
-        console.log("Sending...")
+        //console.log("Sending...")
+        this.setState({
+            button: {
+                text: 'Sending...',
+                disabled: true
+            }
+        })
     }
 
     handleChange = (e,target)=>{
@@ -100,6 +139,16 @@ class ContactForm extends Component{
         e.preventDefault();
         //console.log(this.state.formResponse)
         this.SendData(this.state.formResponse);
+        
+        
+    }
+
+    renderButton = () =>{
+        return(
+            <Button variant="primary" type="submit" disabled={this.state.button.disabled ? 'disabled':""}>
+                {this.state.button.text}
+            </Button>
+        )
     }
 
 
@@ -123,7 +172,7 @@ class ContactForm extends Component{
                         <div>
                             <h4>Bible Passages Source</h4>
                             <p>
-                                <a href="https://rapidapi.com/ajith/api/holy-bible/">Holy Bible API</a>
+                                <a href="https://rapidapi.com/ajith/api/holy-bible/" rel="noreferrer" target="_blank">Holy Bible API</a>
                             </p>
                         </div>
 
@@ -147,12 +196,15 @@ class ContactForm extends Component{
                                 <Form.Control type="text" 
                                 value={this.state.formResponse.from_name}
                                     onChange={(e)=>this.handleChange(e,'from_name')}
+                                    required
                                     />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formEmail">
                             <Form.Label>Your Email address</Form.Label>
-                            <Form.Control type="email" 
+                            <Form.Control type="email"
+                                value={this.state.formResponse.reply_to}
                                 onChange={(e) => this.handleChange(e, 'reply_to')}
+                                required
                              />
                         </Form.Group>
                             
@@ -163,8 +215,9 @@ class ContactForm extends Component{
                             <Form.Control
                                 as="textarea"
                                 placeholder="Leave a message here"
+                                value={this.state.formResponse.message}
                                 onChange={(e) => this.handleChange(e, 'message')}
-                                
+                                required
                                 style={{ height: '100px' }}
                             />
                         </Form.Group>
@@ -173,9 +226,7 @@ class ContactForm extends Component{
 
                         <div className="text-center">
                             
-                                <Button variant="primary" type="submit" >
-                                    Submit
-                                </Button>
+                            {this.renderButton()}
                             
                         </div>
                         
@@ -183,29 +234,12 @@ class ContactForm extends Component{
 
                     </Form>
 
-                    <Modal
-                        show={this.state.modal.showModal}
-                        onHide={() => this.renderModal({ showModal: false })}
-                        size="lg"
-                        aria-labelledby="contained-modal-title-vcenter"
-                        closeButton ={false}
-                        centered
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title id="contained-modal-title-vcenter">
-                                {this.state.modal.remark}
-                            </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <h4>{this.state.modal.message}</h4>
-                            
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant={this.state.modal.variant} onClick={() => this.renderModal({ showModal: false })}>
-                                Close
-                            </Button>
-                        </Modal.Footer>
-                    </Modal>
+                    <PopUp 
+                        show={this.state.modal.showModal} 
+                        status={this.state.modal.variant} 
+                        data={{remark:this.state.modal.remark, message:this.state.modal.message}}
+                        handle={this.renderModal}
+                    />
 
                 </Col>
                 
