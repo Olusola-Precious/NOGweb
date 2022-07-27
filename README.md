@@ -1,5 +1,4 @@
-# Getting Started with Create React App
-
+# Names Of GOD
 This Project Features the Following Names Of GOD:
 * Elohim
 * Yahweh
